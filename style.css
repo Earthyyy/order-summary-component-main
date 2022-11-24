@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+    /** Primary Colors **/
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245,75%,52%);
+
+
+    /** Neutral Colors **/
+    --very-pale-blue: hsl(225,100%,98%);
+    --desaturated-blue: hsl(224,75%,52%);
+    --dark-blue: hsl(223,47%,23%);
+
+    /** Font Properties **/
+    --ff-primary: 'Red Hat Display', sans-serif;
+    --fs-regular: 1rem;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+
+
+
+
+
+
+/* Josh Comeau CSS Reset*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/*
+    General Styling
+*/
+
+body {
+    background: url('./images/pattern-background-mobile.svg') no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-primary);
+    padding-inline: 1.5rem;
+
+}
+
+p {
+    font-size: var(--fs-regular);
+}
+
+/*
+    Article Styling
+*/
+
+article {
+    background-color: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: rgba(103,92,224,0.22) 0px 48px 100px 0px;
+    max-width: 28.25rem;
+}
+
+.order__illustration {
+    width: 100%;
+}
+
+.order__details {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+}
+
+.order__title {
+    text-align: center;
+
+    font-weight: var(--fw-black);
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+}
+
+.order__description {
+    text-align: center;
+    color: #2b4f728a;
+    font-weight: var(--fw-medium);
+    line-height: 1.6;
+}
+
+.order__plan {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .7rem;
+    background-color: var(--very-pale-blue);
+}
+
+.change-button {
+    font-size: .8275rem;
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-bold);
+}
+
+.change-button:hover {
+    text-decoration: none;
+    color: rgba(56, 41, 224, 0.6);
+}
+
+.flex-item {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.plan__details > p {
+    font-size: .9rem;
+}
+
+.plan__type {
+    font-weight: var(--fw-black);
+    color: var(--dark-blue);
+}
+
+.plan__price {
+    color: #2b4f728a;
+    font-weight: var(--fw-bold);
+}
+
+.submit-button {
+    border: none;
+    color: white;
+    background-color: var(--bright-blue);
+    padding: .9rem 0;
+    border-radius: .7rem;
+    font-weight: var(--fw-bold);
+    box-shadow: 16px 22px 30px 0px rgba(103,92,224,0.22);
+    transition: background-color 100ms;
+}
+
+.submit-button:hover {
+    background-color: rgba(56, 41, 224, 0.6);
+    cursor: pointer;
+}
+
+.cancel-button {
+    text-align: center;
+    text-decoration: none;
+    color: #2b4f728a;
+    font-weight: var(--fw-black);
+    font-size: .9rem;
+    transition: color 100ms;
+}
+
+.cancel-button:hover {
+    color: var(--dark-blue);
+}
+
+@media only screen and (min-width: 31.25rem) {
+    body {
+        background: url("./images/pattern-background-desktop.svg") no-repeat;
+        background-size: 100% 50%;
+        background-color: var(--pale-blue);
+    }
+    .order__details {
+        padding: 3rem;
+    }
+
+    .order__plan {
+        padding: 1.4rem;
+    }
+
+    
+
+}
