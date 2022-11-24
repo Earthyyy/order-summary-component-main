@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Order Summary Card by Earthyyy](#)
+- Live Site URL: [Order Summary Card by Earthyy](https://earthyy-order-summary-component.netlify.app/)
 
 ## My process
 
